@@ -37,7 +37,7 @@ public class AndroidLog4jHelper {
         AndroidLog4jHelper.configResource = configResource;
         System.setProperty("Log4jContextSelector", "net.loune.log4j2android.AndroidContextSelector");
         System.setProperty("log4j2.disable.jmx", "true");
-        injectPlugins("com.nasquan.opalsense.app.utility", new Class<?>[] { AndroidLookup.class, LogcatAppender.class });
+        injectPlugins("net.loune.log4j2android", new Class<?>[] { AndroidLookup.class, LogcatAppender.class });
     }
 
     public static void injectPlugins(String packageName, Class<?>[] classes) {
